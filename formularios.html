@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt.br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários Parte 2</title>
+</head>
+<body>
+    <header>
+        <h1>Formulários Parte 2</h1>
+    </header>
+    <hr>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Informações</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Contato</h2>
+        </section>
+        <section>
+            <form method="post">
+                <!--Padrão do elemento form, quando não existe a definição do action é que, quando emviado, o formulário "irá" para mesma página-->
+                <!-- POST: evia dados para o servidor no corpo solicitação
+                GET: parâmetros são passados pela URL, visíveis na barra de endereço-->
+                <label>Nome: </label>
+                <input type="text" name="nome" id="nome">
+                <br><br>
+                <label>E-mail: </label>
+                <input type="email" name="email" id="email">
+                <br><br>
+                <fieldset>
+                    <!--O fieldset cria uma "caixinha" para delimitar campos em comum-->
+                    <legend>Dados Pessoais</legend>
+                    <!--Cria uma legenda para especificar quais são esses "campos em comum"-->
+                    <label>Endereço: </label>
+                    <br>
+                    <textarea name="endereco" id="endereco" cols="80" rows="5"></textarea>
+                    <br>
+                    <label>Estado: </label>
+                    <select name="estado" id="estado">
+                        <optgroup label="Sudeste">
+                            <option value="sp">São Paulo</option>
+                        </optgroup>
+                        </select>
+                        <!--O select cria uma lista de opções para o usuário
+                        escolher, ele é vantajoso quando queremos limitar
+                    quais respostas serão dadas para certos campos.
+                    É possível agrupar opções (potions) por meio
+                    do elemento optgroup, ele cria uma etiqueta para
+                    definir elementos em comum-->
+                    <label>Idade: </label>
+                    <input type="number" name="idade" id="idade" step="1" min="1" max="100">
+                    <label>Altura (em metros): </label>
+                    <!--Input tipo número (number) pode ser utilizado 
+                    em conjuntos com o atributo step, que define a variação desse
+                    número (passo), o atributo min e max, que define o 
+                    maior e menor valor aceito naquele input, respectivamente-->
+                    <label>Data: </label>
+                    <input type="date" name="data" id="data">
+                    <br><br>
+                    <label>Cidade: </label>
+                    <input list="cidades" name="cidade" id="cidade">
+                    <datalist id="cidades">
+                        <option value="São Paulo"></option>
+                        <option value="São Carlos"></option>
+                        <option value="Batatais"></option>
+                        <option value="Outra"></option>
+                    </datalist>
+
+                </fieldset>
+                <br><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+        <header>
+            <h1>Exercícios Formulários</h1>
+        </header>
+        <hr>
+    
+     
+        <main>
+
+            <fieldset>
+                <!--O fieldset cria uma "caixinha" para delimitar campos em comum-->
+                <legend>Dados Pessoais</legend>
+                <!--Cria uma legenda para especificar quais são esses "campos em comum"-->
+                <label>Nome: </label>
+                <br>
+                <textarea name="nome" id="nome" cols="80" rows="2"></textarea>
+                <br>
+                <label> Gênero: </label>
+                <select name="genero" id="genero">
+                        <option value="masc">Masculino</option>
+                        <option value="fem">Feminino</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                    </fieldset>
+                    <br><br>
+                    <label>País de Origem: </label>
+                    <select name="pais" id="pais">
+                        <optgroup label="América">
+                            <option value="br">Brasil</option>
+                            <option value="eua">Estados Unidos</option>
+                            <option value="cnd">Canadá</option>
+                        </optgroup>
+                        <optgroup label="Ásia">
+                            <option value="Japão">Japão</option>
+                        </optgroup>
+                        <optgroup label="Europa">
+                          <option value="Alemanha">Alemanha</option>  
+                        </optgroup>
+                        </select>
+                        <br><br>
+                        <label>Idade: </label>
+                    <input type="number" name="idade" id="idade" step="5" min="1" max="100">
+                    <label>Data: </label>
+                    <input type="date" name="data" id="data">
+                    <br><br>
+                    <label>Comentários e Feedbacks:</label>
+                    <br>
+                    <textarea name="Comentários e Feedbacks" id="" cols="80" rows="10"></textarea>
+                    </main>
+                    </body>
+                
+</html>
